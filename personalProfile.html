@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <title>My Profile - InstaArt</title>
+    <link rel="stylesheet" href="personalProfileCSS.css">
+</head>
+<body>
+
+	<header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="instaArt">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Upload</a></li>
+                    <li><a href="#">Log out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+<div id="personalProfileForm" class="box">
+	<img src="img/avatar.png" alt="Your profile picture">
+	<p id="username">username</p>
+		<form id="profileChange">
+		<a href="#">Change your profile picture</a> <!-- galima panaudoti ta pati langa is paprastos foto ikelimo -->
+		<a href="#">Change your username</a>
+			<input type="text" id="newUsername">
+			<button id="newUsernameSubmit" type="Submit" value="Submit"></button>
+		<a href="#">Change your password</a>
+			<input type="password" id="newPassword">
+			<input type="password" name="confirmPassword">
+		</form>
+</div>
+
+    <footer>
+        <p>instaArt &copy; 2019</p>
+    </footer>
+
+</body>
+</html>
