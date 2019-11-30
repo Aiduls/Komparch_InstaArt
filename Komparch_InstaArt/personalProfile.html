@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <title>My Profile - InstaArt</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="instaArt">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Upload</a></li>
+                    <li><a href="#">Log out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+<div id="personalProfileForm" class="box">
+	<img src="img/avatar.png" alt="Your profile picture">
+	<p id="username">username</p>
+		<form id="profileChange">
+			<a type="button" onclick="alert('Cia galetumem ideti ta pati langa is nuotraukos ikelimo')" href="#">Change your profile picture</a> <!-- galima panaudoti ta pati langa is paprastos foto ikelimo -->
+			<a class="change" type="button" href="#">Change your username</a>
+				<div class="content">
+					<input type="text" id="newUsername" placeholder="Your new username">
+					<button id="newUsernameSubmit" type="button">Confirm</button>
+				</div>
+			<a class="change" type="button" href="#">Change your password</a>
+				<div class="content">
+					<input type="password" id="newPassword" placeholder="Your new password">
+					<input type="password" name="confirmPassword" placeholder="Confirm your new password">
+					<button id="newPasswordSubmit" type="button">Confirm</button>
+				</div>
+		</form>
+</div>
+
+    <footer>
+        <p>instaArt &copy; 2019</p>
+    </footer>
+
+
+    <script type="text/javascript">
+    	
+    	var coll = document.getElementsByClassName("change");
+
+		for (let i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var content = this.nextElementSibling;
+		    if (content.style.maxHeight) {
+		      content.style.maxHeight = null;
+		    } 
+		    else {
+		      content.style.maxHeight = content.scrollHeight + "px";
+		    }
+		  });
+}
+
+    </script>
+</body>
+</html>
